@@ -1,0 +1,21 @@
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0 4pt;
+  border-radius: 4pt;
+  height: 45px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #48484a;
+}
+
+.result-item .col {
+  flex: 1 0 18%;
+}
+
+.result-item:hover {
+  background-color: hsla(0, 0%, 94.9%, 0.5);
+}

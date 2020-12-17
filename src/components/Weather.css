@@ -1,0 +1,168 @@
+body {
+  background-image: url(../assets/img/bg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+.ui.inverted.dimmer {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.weather .ui.segment {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.container h1.ui.header {
+  margin-top: 1rem;
+  margin-bottom: 0em;
+  font-size: 4rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.container h2.ui.header {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.transition {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.slider {
+  overflow-x: scroll;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  cursor: grabbing;
+}
+
+.weather-icon {
+  max-width: 200px;
+  pointer-events: none;
+}
+
+.card {
+  padding: 0 2rem 2rem 2rem;
+  background-color: #ccdae3;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-height: 20rem;
+  min-width: 30rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  transition: transform 0.2s linear;
+}
+
+.card .prop {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin: 3%;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.active {
+  transform: scale(1.01);
+  transition: transform 0.2s linear;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media screen and (max-height: 930px) {
+  .container h1.ui.header {
+    margin-top: 0.8rem;
+    font-size: 3rem;
+  }
+
+  .container h2.ui.header {
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 0 1rem 1rem 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-height: 10rem;
+    min-width: 20rem;
+  }
+
+  .card .prop {
+    font-size: 1.1rem;
+    margin: 1%;
+  }
+
+  .weather-icon {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-height: 710px) {
+  .container h1.ui.header {
+    margin-top: 0.6rem;
+    font-size: 2rem;
+  }
+
+  .container h2.ui.header {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 0 0.8rem 0.8rem 0.8rem;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    min-height: 8rem;
+    min-width: 16rem;
+  }
+
+  .card .prop {
+    font-size: 0.9rem;
+    margin: 1%;
+  }
+
+  .weather-icon {
+    max-width: 80px;
+  }
+}
+
+@media screen and (min-height: 710px) and (min-width: 764px) {
+  .weather {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
